@@ -1,33 +1,33 @@
-%div.chat-main
-  %div.chat-main__group-info
-    %div.right-header
-      %div.right-header__group
-        %div.right-header__group-name
+.chat-main
+ .chat-main__group-info
+   .right-header
+      .right-header__group
+        .right-header__group-name
           test
         %ul.right-header__member-list
           Member:
           %li
             jpkkkkkkkkkkkk
-      %div.right-header__edit
+      .right-header__edit
         = link_to "#" ,class:"edit-btn" do
           edit
-  %div.chat-main__message-list
-    %div.chat-main__message-box
-      %div.chat-main__message-info
-        %div.chat-main__message-user-name
+  .chat-main__message
+    .chat-main__message-box
+      .chat-main__message-info
+        .chat-main__message-user-name
           jp
-        %div.chat-main__message-date
+        .chat-main__message-date
           2019/11/20(wed)17:42:01
-      %div.chat-main__message-content
+      .chat-main__message-content
         おはよう！
-  %div.chat-main__message-form
-    %div.chat-main__message-form-text-image
-      %div.chat-main__message-form-text
-        %input.text{:name => "message[content]", :placeholder => "type a message", :type => "text", :value => ""}/
-      %div.chat-main__message-icon
+  .chat-main__message-form
+    .chat-main__message-form-text-image
+      div.chat-main__message-form-text
+        %input.text{name: "message[content]", placeholder: "type a message", type: "text", value: ""}/
+      .chat-main__message-form-icon
         %label{class: "input-box__image"}
           = icon('fas', 'image')
           %input{type: "file"
-      %div.chat-main__message-form-btn
+      .chat-main__message-form-btn
         Send
     

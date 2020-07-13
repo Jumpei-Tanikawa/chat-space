@@ -8,29 +8,29 @@
 .side-bar {
   background-color: #253141;
   width: 300px;
-  .side-bar__user {
+  &__user {
     background-color: #253141;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
   }
-    .side-bar__header {
+    &__header {
       height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
     }
-    .side-bar__user-name {
+    &__user-name {
       color: #ffffff;
       height: 20px;
       font-size: 16px;
       font-weight: bold;
     }
-    .side-bar__icon-list {
+    &__icon-list {
       display: flex;
       list-style: none;
-      .side-bar__icon {
+      &__icon {
         color: #ffffff;
         padding-left: 5px;
       }
@@ -96,7 +96,7 @@
       }
     }
   }
-  .chat-main__message-list {
+  .chat-main__message {
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px 0;
@@ -126,12 +126,12 @@
     background-color: #dddddd;
     height: 90px;
     display: flex;
-    .chat-main__message-form-text-image {
+    &-text-image {
       width: 100%;
       position: relative;
       padding: 20px 50px 20px 40px;
       display: flex;
-      .chat-main__message-form-text {
+      &-text {
         border: none;
         height: 50px;
         width: 100%;
@@ -142,7 +142,7 @@
           padding-left: 15px;
         }
       }
-      .chat-main__message-icon {
+      &-icon {
         height: 50px;
         position: absolute;
         right: 177px;
@@ -154,7 +154,7 @@
           } 
       }
     }
-    .chat-main__message-form-btn {
+    &-btn {
       width: 100px;
       height: 50px;
       padding: 13px 30px;
