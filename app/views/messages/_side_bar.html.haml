@@ -1,0 +1,18 @@
+%div.side-bar
+  %div.side-bar__user
+    %div.side-bar__header
+      %h3.side-bar__user-name jp
+      %ul.side-bar__icon-list
+        %li
+          = link_to "#", class: "side-bar__icon" do
+            = icon('far', 'edit')
+        %li
+          = link_to "#", class: "side-bar__icon" do
+            = icon('fas', 'cog')
+
+  %div.side-bar__group-list
+    %div.side-bar__group
+      %div.side-bar__group-name
+        techcamp
+      %div.side-bar__group-message
+        まだメッセージがありません。
