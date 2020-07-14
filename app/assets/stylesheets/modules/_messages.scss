@@ -126,12 +126,12 @@
     background-color: #dddddd;
     height: 90px;
     display: flex;
-    &-text-image {
+    .chat-main__message-form-text-image {
       width: 100%;
       position: relative;
       padding: 20px 50px 20px 40px;
       display: flex;
-      &-text {
+      .chat-main__message-form-text {
         border: none;
         height: 50px;
         width: 100%;
@@ -142,19 +142,20 @@
           padding-left: 15px;
         }
       }
-      &-icon {
+      .chat-main__message-form-icon {
         height: 50px;
         position: absolute;
         right: 177px;
         top: 27px;
         font-size: 23px;
         margin-left: 15px;
+        padding-top: 8;
         input{
             display: none;
           } 
       }
     }
-    &-btn {
+    .chat-main__message-form-btn {
       width: 100px;
       height: 50px;
       padding: 13px 30px;

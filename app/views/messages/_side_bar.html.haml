@@ -1,18 +1,19 @@
 %div.side-bar
   %div.side-bar__user
     %div.side-bar__header
-      %h3.side-bar__user-name jp
+      %h3.side-bar__user-name 
+        = current_user.name
       %ul.side-bar__icon-list
-        %li
-          = link_to "#", class: "side-bar__icon" do
+        %li.side-bar__icon
+          = link_to "#" do
             = icon('far', 'edit')
-        %li
-          = link_to "#", class: "side-bar__icon" do
+        %li.side-bar__icon
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
 
   %div.side-bar__group-list
     %div.side-bar__group
       %div.side-bar__group-name
-        techcamp
+        グループ名
       %div.side-bar__group-message
-        まだメッセージがありません。
+        最新のメッセージ
