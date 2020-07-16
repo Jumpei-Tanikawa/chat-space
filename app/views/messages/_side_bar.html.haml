@@ -1,19 +1,21 @@
-%div.side-bar
-  %div.side-bar__user
-    %div.side-bar__header
-      %h3.side-bar__user-name 
+.side-bar
+  .side-bar__user
+    .side-bar__header
+      .side-bar__user-name 
         = current_user.name
       %ul.side-bar__icon-list
         %li.side-bar__icon
-          = link_to "#" do
+          = link_to "/groups/new" do
             = icon('far', 'edit')
         %li.side-bar__icon
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
 
-  %div.side-bar__group-list
-    %div.side-bar__group
-      %div.side-bar__group-name
-        グループ名
-      %div.side-bar__group-message
-        最新のメッセージ
+  .side-bar__group-list
+    - current_user.groups.each do |group|
+      .side-bar__group
+        = link_to '#' do
+          .side-bar__group-name
+            = group.name
+          .side-bar__group-message
+            最新のメッセージ
