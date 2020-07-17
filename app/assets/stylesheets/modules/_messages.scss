@@ -33,6 +33,9 @@
       &__icon {
         color: #ffffff;
         padding-left: 5px;
+        a {
+          color: #ffffff;
+        }
       }
     }
 
@@ -42,9 +45,13 @@
     .side-bar__group {
       padding: 20px 0 40px 0;
       margin: 0 20px 0 20px;
+      a {
+        text-decoration: none;
+      }
       .side-bar__group-name {
         font-size: 15px;
         color: #ffffff;
+       text-decoration: none;
       }
       .side-bar__group-message {
         font-size: 11px;
@@ -96,72 +103,77 @@
       }
     }
   }
-  .chat-main__message {
+  .MessageField {
     background-color: #fafafa;
-    height: calc(100vh - 100px - 90px);
+    box-sizing: border-box;
     padding: 35px 40px 0;
-    .chat-main__message-box {
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .MessageBox {
       margin-bottom: 46px;
-      .chat-main__message-info {
+      .MessageInfo {
         display: flex;
-        .chat-main__message-user-name {
+        .MessageInfo__userName {
+          color: #434a54;
           font-size: 16px;
-          color: #333333;
           font-weight: bold;
         }
-        .chat-main__message-date {
-          font-size: 12px;
+        .MessageInfo__date {
           color: #999999;
+          font-size: 12px;
           padding-left: 10px;
         }
       }
-      .chat-main__message-content {
-        font-size: 14px;
-        color: #434a54;
-        padding-top: 12px;
+      .Message {
+        margin-top: 12px;
+        .Message__content {
+          color: #434a54;
+          font-size: 14px;
+        }
       }
     }
   }
-  .chat-main__message-form {
+
+  .Footer {
     background-color: #dddddd;
+    box-sizing: border-box;
     height: 90px;
-    display: flex;
-    .chat-main__message-form-text-image {
-      width: 100%;
-      position: relative;
-      padding: 20px 50px 20px 40px;
+    padding: 20px 50px 20px 40px;
+    .Form {
       display: flex;
-      .chat-main__message-form-text {
-        border: none;
-        height: 50px;
+      justify-content: space-between;
+      .Form__contents {
         width: 100%;
-        .text {
+        background-color: #fff;
+        position: relative;
+        .Form__inputContent {
           border: none;
           height: 50px;
           width: 100%;
-          padding-left: 15px;
+          padding: 0 45px 0 15px;
+        }
+        .Form__inputImage {
+          height: 50px;
+          position: absolute;
+          right: 10px;
+          input{
+            display: none;
+          }
+          .Form__icon {
+            line-height: 50px;
+            font-size: 25px;
+          }
         }
       }
-      .chat-main__message-form-icon {
+      .Form__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: 16px;
         height: 50px;
-        position: absolute;
-        right: 177px;
-        top: 27px;
-        font-size: 23px;
         margin-left: 15px;
-        padding-top: 8;
-        input{
-            display: none;
-          } 
+        padding: 0 30px;
       }
-    }
-    .chat-main__message-form-btn {
-      width: 100px;
-      height: 50px;
-      padding: 13px 30px;
-      background-color: #38aef0;
-      margin-left: 15px;
-      color: #ffffff;
     }
   }
 }
